@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Build a Custom Moderation Dashboard with Stream
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based moderation dashboard for Stream's content moderation system. This dashboard allows moderators to review and manage flagged content efficiently.
 
-## Available Scripts
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="./screenshots/review_queue.png" alt="Moderation Dashboard" height="500">
+      <br>
+      <em>Review Queue</em>
+    </td>
+    <td align="center">
+      <img src="./screenshots/content_details.png" alt="Content Details" height="500">
+      <br>
+      <em>Content Details</em>
+    </td>
+  </tr>
+</table>
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Review queue for flagged content
+- Content details view with images and text
+- User information and moderation history
+- Action buttons for quick moderation decisions
+- Infinite scroll for content loading
+- Reviewed content history
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js (v14 or higher)
+- npm or yarn
+- Stream API credentials
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+```bash
+git clone https://github.com/GetStream/moderation-dashboard-example.git
+cd custom-moderation-dashboard
+```
 
-### `npm run build`
+2. Install dependencies:
+```bash
+yarn install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Create a `.env` file in the root directory and add your Stream API credentials:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```env
+REACT_APP_STREAM_API_KEY=your_stream_api_key
+REACT_APP_MODERATOR_USER_ID=your_moderator_user_id
+REACT_APP_MODERATOR_TOKEN=your_moderator_token
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Start the development server:
 
-### `npm run eject`
+```bash
+yarn start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The dashboard provides two main views:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Needs Review**: Shows content that requires moderation
+   - View content details
+   - Mark as reviewed
+   - Delete content
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Reviewed**: Shows previously moderated content
+   - View historical decisions
+   - Review past actions
 
-## Learn More
+## Built With
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React
+- Stream Chat API
+- Semantic UI React
+- Lodash
