@@ -28,7 +28,7 @@ A React-based moderation dashboard for Stream's content moderation system. This 
 
 ## Prerequisites
 
-- Node.js (v14 or higher)
+- Node.js (v18 or higher)
 - npm or yarn
 - Stream API credentials
 
